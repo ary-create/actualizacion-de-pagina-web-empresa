@@ -1,118 +1,163 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAYMO | Muebles de Diseño</title>
-    <!-- Vincula la hoja de estilos CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Estilos adicionales para mejorar el diseño */
-        body {
-            background-color: #f7f7f7;
-            font-family: 'Arial', sans-serif;
-        }
-        .hero-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.1); /* Añade una capa oscura */
-            z-index: 5;
-        }
-        .product-card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAYMO | Muebles de Diseño</title>
+    <!-- Vincula la hoja de estilos CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos adicionales para mejorar el diseño */
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+        }
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1); /* Añade una capa oscura */
+            z-index: 5;
+        }
+        .product-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <header class="bg-white shadow-lg">
-        <div class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="logo-container">
-                <!-- Logo de la marca -->
-                <img src="https://www.faymo.cl/images/logo.png" alt="Logo de FAYMO" class="w-32 h-auto">
-            </div>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300">Catálogo</a>
-                <a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300">Nosotros</a>
-                <a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300">Contacto</a>
-            </nav>
-            <button id="menu-button" class="md:hidden text-gray-700 hover:text-orange-500 focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-        <!-- Menú móvil -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner">
-            <a href="#" class="block py-2 px-6 text-gray-700 hover:bg-gray-200">Catálogo</a>
-            <a href="#" class="block py-2 px-6 text-gray-700 hover:bg-gray-200">Nosotros</a>
-            <a href="#" class="block py-2 px-6 text-gray-700 hover:bg-gray-200">Contacto</a>
-        </div>
-    </header>
+    <!-- Encabezado negro con sombreado 3D y diseño abstracto -->
+    <header class="bg-black text-white shadow-2xl relative">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="logo-container">
+                <!-- Logo de la marca -->
+                <img src="uploaded:image_15a57e.png-db7db83e-1322-4259-a131-f4bb9b1e6e0a" alt="Logo de FAYMO" class="w-32 h-auto">
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-white hover:text-orange-500 transition duration-300">Catálogo</a>
+                <a href="#" class="text-white hover:text-orange-500 transition duration-300">Nosotros</a>
+                <a href="#" class="text-white hover:text-orange-500 transition duration-300">Contacto</a>
+            </nav>
+            <button id="menu-button" class="md:hidden text-white hover:text-orange-500 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Imagen superpuesta en la esquina superior derecha del encabezado -->
+        <img src="https://images.unsplash.com/photo-1547844111-c9ceac1143c7?q=80&w=2670&auto=format&fit=crop" alt="Elemento de diseño abstracto" class="absolute top-0 right-0 w-32 h-32 rounded-lg opacity-30 z-20 hidden md:block">
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black shadow-inner">
+            <a href="#" class="block py-2 px-6 text-white hover:bg-gray-800">Catálogo</a>
+            <a href="#" class="block py-2 px-6 text-white hover:bg-gray-800">Nosotros</a>
+            <a href="#" class="block py-2 px-6 text-white hover:bg-gray-800">Contacto</a>
+        </div>
+    </header>
 
-    <main class="container mx-auto mt-8 px-4">
-        <section class="bg-orange-500 text-white rounded-xl shadow-lg p-8 md:p-16 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8 relative">
-            <img src="https://placehold.co/600x400/FF5733/FFFFFF?text=Fondo" alt="Muebles de oficina" class="absolute inset-0 w-full h-full object-cover rounded-xl opacity-30">
-            <div class="hero-text text-center md:text-left relative z-10">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Diseño que transforma tu entorno</h1>
-                <p class="text-lg md:text-xl mb-6">Muebles únicos que combinan estilo, calidad y funcionalidad.</p>
-                <a href="#" class="bg-white text-orange-500 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105">Explora el Catálogo</a>
-            </div>
-            <div class="hero-image flex-shrink-0 relative z-10">
-                <!-- La imagen de la silla que proporcionaste -->
-                <img src="https://placehold.co/400x300/333/FFFFFF?text=Silla+Ergonómica+Pro" alt="Silla de oficina ergonómica" class="rounded-xl shadow-md w-full md:w-auto">
-            </div>
-        </section>
+    <main class="container mx-auto mt-8 px-4">
+        <section class="bg-orange-500 text-white rounded-xl shadow-lg p-8 md:p-16 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8 relative">
+            <!-- Imagen de fondo real -->
+            <img src="https://images.unsplash.com/photo-1517056082405-b0453545b799?q=80&w=2942&auto=format&fit=crop" alt="Muebles de oficina" class="absolute inset-0 w-full h-full object-cover rounded-xl opacity-30">
+            <div class="hero-text text-center md:text-left relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Diseño que transforma tu entorno</h1>
+                <p class="text-lg md:text-xl mb-6">Muebles únicos que combinan estilo, calidad y funcionalidad.</p>
+                <a href="#" class="bg-white text-orange-500 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105">Explora el Catálogo</a>
+            </div>
+            <div class="hero-image flex-shrink-0 relative z-10">
+                <!-- Enlace al catálogo que contendrá la imagen del carrusel -->
+                <a href="#" id="catalog-link">
+                    <!-- Imagen del carrusel de productos -->
+                    <img id="hero-product-image" src="https://images.unsplash.com/photo-1560769629-9f799e0300d3?q=80&w=2803&auto=format&fit=crop" alt="Silla de oficina ergonómica" class="rounded-xl shadow-md w-full md:w-auto">
+                </a>
+            </div>
+        </section>
 
-        <section class="featured-products mt-16 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8">Algunos de nuestros muebles</h2>
-            <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Producto destacado 1 -->
-                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
-                    <img src="https://placehold.co/400x300/333/FFFFFF?text=Escritorio+Ejecutivo" alt="Escritorio moderno para oficina" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Escritorio Ejecutivo</h3>
-                        <p class="text-gray-600">Funcionalidad y elegancia para tu espacio de trabajo.</p>
-                    </div>
-                </div>
-                <!-- Producto destacado 2 -->
-                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
-                    <img src="https://placehold.co/400x300/333/FFFFFF?text=Silla+Ergonómica+Pro" alt="Silla de oficina ergonómica" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Silla Ergonómica Pro</h3>
-                        <p class="text-gray-600">Comodidad y soporte durante largas jornadas de trabajo.</p>
-                    </div>
-                </div>
-                <!-- Producto destacado 3 -->
-                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
-                    <img src="https://placehold.co/400x300/333/FFFFFF?text=Archivero+Metálico" alt="Archivero metálico para oficina" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Archivero Metálico</h3>
-                        <p class="text-gray-600">Soluciones de almacenamiento para mantener tu oficina organizada.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        <section class="featured-products mt-16 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Algunos de nuestros muebles</h2>
+            <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Producto destacado 1 - Escritorio -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1629851752409-7a5f6e5251a3?q=80&w=2835&auto=format&fit=crop" alt="Escritorio moderno para oficina" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Escritorio Ejecutivo</h3>
+                        <p class="text-gray-600">Funcionalidad y elegancia para tu espacio de trabajo.</p>
+                    </div>
+                </div>
+                <!-- Producto destacado 2 - Silla -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1596701831826-b514b8a2e557?q=80&w=2835&auto=format&fit=crop" alt="Silla de oficina ergonómica" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Silla Ergonómica Pro</h3>
+                    </div>
+                </div>
+                <!-- Producto destacado 3 - Archivero -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1549488344-9c16e1669c28?q=80&w=2835&auto=format&fit=crop" alt="Archivero metálico para oficina" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Archivero Metálico</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer class="bg-gray-800 text-white text-center py-6 mt-16">
-        <p class="text-sm">&copy; 2024 FAYMO. Todos los derechos reservados.</p>
-    </footer>
+    <footer class="bg-gray-800 text-white text-center py-6 mt-16">
+        <p class="text-sm">&copy; 2024 FAYMO. Todos los derechos reservados.</p>
+    </footer>
 
-    <script>
-        // Lógica del menú móvil
-        const menuButton = document.getElementById('menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <script>
+        // Lógica del menú móvil
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lógica del carrusel de imágenes
+        document.addEventListener("DOMContentLoaded", () => {
+            const heroProductImage = document.getElementById('hero-product-image');
+            const images = [
+                // Imagen de silla (la que ya estaba)
+                'https://images.unsplash.com/photo-1560769629-9f799e0300d3?q=80&w=2803&auto=format&fit=crop',
+                // Nueva imagen de un escritorio y silla
+                'https://images.unsplash.com/photo-1596701831826-b514b8a2e557?q=80&w=2835&auto=format&fit=crop',
+                // Nueva imagen de una oficina con archivero
+                'https://images.unsplash.com/photo-1549488344-9c16e1669c28?q=80&w=2835&auto=format&fit=crop',
+                // Imagen de la estantería (la que me proporcionaste)
+                'uploaded:image_14ae3d.png-4cd3f426-fa9a-4c33-bb54-5daa2819fb33',
+                // Imagen de una búsqueda de Google
+                'https://images.unsplash.com/photo-1544061559-00f7c223a5d8?q=80&w=2835&auto=format&fit=crop',
+                // Nueva imagen del gabinete blanco
+                'uploaded:image_14a6d3.png-7b61b37e-0610-49e9-a362-f390758c2c09',
+                // Nueva imagen del casillero metálico
+                'uploaded:image_14a657.png-f3539d9d-a59c-4bdb-91c1-15cc273f9a47',
+                // Nueva imagen del escritorio en L
+                'uploaded:image_14a2f9.png-fe3fa57e-292a-499c-b94e-6c3e11162cd0',
+                // Nueva imagen de la silla de oficina
+                'uploaded:image_14a36f.png-d37e309e-e318-4751-b0be-6936e1a803e7'
+            ];
+            let currentImageIndex = 0;
+
+            function changeImage() {
+                // Incrementa el índice y lo resetea si llega al final del array
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                heroProductImage.src = images[currentImageIndex];
+            }
+
+            // Cambia la imagen cada 5 segundos
+            setInterval(changeImage, 5000);
         });
-    </script>
+    </script>
 </body>
 </html>
+
+         
+              
+               
+
